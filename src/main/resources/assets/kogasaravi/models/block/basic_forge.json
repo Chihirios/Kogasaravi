@@ -1,0 +1,37 @@
+{
+  "parent": "block/block",
+  "textures": {
+    "base_face": "kogasaravi:block/basic_forge/base_face",
+    "base_side": "kogasaravi:block/basic_forge/base_side",
+    "chamber_front": "kogasaravi:block/basic_forge/chamber_front",
+    "chamber_side": "kogasaravi:block/basic_forge/chamber_side",
+    "chamber_top": "kogasaravi:block/basic_forge/chamber_top"
+  },
+  "elements": [
+    {
+      "_comment": "base",
+      "from": [ 0, 0, 0 ],
+      "to": [ 16, 4, 16 ],
+      "faces": {
+        "down":  { "texture": "#base_face", "cullface": "down" },
+        "up":    { "texture": "#base_face" },
+        "north": { "texture": "#base_side", "cullface": "north" },
+        "south": { "texture": "#base_side", "cullface": "south" },
+        "west":  { "texture": "#base_side", "cullface": "west" },
+        "east":  { "texture": "#base_side", "cullface": "east" }
+      }
+    },
+    {
+      "_comment": "chamber",
+      "from": [ 2, 0, 2 ],
+      "to": [ 14, 16, 14 ],
+      "faces": {
+        "up":    { "texture": "#chamber_top", "cullface": "up" },
+        "north": { "texture": "#chamber_front", "cullface": "north" },
+        "south": { "texture": "#chamber_side", "cullface": "south" },
+        "west":  { "texture": "#chamber_side", "cullface": "west" },
+        "east":  { "texture": "#chamber_side", "cullface": "east" }
+      }
+    }
+  ]
+}

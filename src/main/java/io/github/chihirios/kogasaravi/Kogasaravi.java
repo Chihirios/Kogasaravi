@@ -35,6 +35,7 @@ public class Kogasaravi
 
         KogasaraviItems.register(eventBus);
         KogasaraviBlocks.register(eventBus);
+        KogasaraviBlockEntities.register(eventBus);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);

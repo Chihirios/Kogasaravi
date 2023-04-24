@@ -1,0 +1,19 @@
+{
+  "variants": {
+    "facing=east": {
+      "model": "kogasaravi:block/basic_forge",
+      "y": 90
+    },
+    "facing=north": {
+      "model": "kogasaravi:block/basic_forge"
+    },
+    "facing=south": {
+      "model": "kogasaravi:block/basic_forge",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "kogasaravi:block/basic_forge",
+      "y": 270
+    }
+  }
+}
