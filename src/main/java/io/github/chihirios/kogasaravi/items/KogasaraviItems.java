@@ -24,7 +24,7 @@ public class KogasaraviItems {
 
     private static void makeCreativeTab(CreativeModeTabEvent.Register event) {
         event.registerCreativeModeTab(Kogasaravi.id("main"), builder -> builder.title(Component.translatable("kogasaravi.itemGroup.main"))
-                .icon(() -> new ItemStack(Items.ANVIL))
+                .icon(() -> new ItemStack(BASIC_FORGE.get()))
                 .displayItems((params, output) -> ITEMS.getEntries().forEach(entry -> output.accept(entry.get()))));
     }
 }
