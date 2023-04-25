@@ -1,5 +1,6 @@
-package io.github.chihirios.kogasaravi;
+package io.github.chihirios.kogasaravi.dimensions;
 
+import io.github.chihirios.kogasaravi.Kogasaravi;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.dimension.DimensionType;

@@ -1,6 +1,9 @@
 package io.github.chihirios.kogasaravi;
 
 import com.mojang.logging.LogUtils;
+import io.github.chihirios.kogasaravi.blocks.KogasaraviBlocks;
+import io.github.chihirios.kogasaravi.blocks.entities.KogasaraviBlockEntities;
+import io.github.chihirios.kogasaravi.items.KogasaraviItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Blocks;

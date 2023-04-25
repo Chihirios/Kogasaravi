@@ -1,5 +1,7 @@
-package io.github.chihirios.kogasaravi;
+package io.github.chihirios.kogasaravi.items;
 
+import io.github.chihirios.kogasaravi.Kogasaravi;
+import io.github.chihirios.kogasaravi.blocks.KogasaraviBlocks;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
 import net.minecraftforge.event.CreativeModeTabEvent;
@@ -14,7 +16,7 @@ public class KogasaraviItems {
     public static final RegistryObject<Item> BASIC_FORGE = ITEMS.register("basic_forge", () -> new BlockItem(KogasaraviBlocks.BASIC_FORGE.get(), new Item.Properties()));
     public static final RegistryObject<Item> CHALLENGE_PORTAL = ITEMS.register("challenge_portal", () -> new BlockItem(KogasaraviBlocks.CHALLENGE_PORTAL.get(), new Item.Properties().rarity(Rarity.EPIC)));
 
-    protected static void register(IEventBus eventBus) {
+    public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
 
         eventBus.addListener(KogasaraviItems::makeCreativeTab);

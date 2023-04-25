@@ -1,7 +1,6 @@
-package io.github.chihirios.kogasaravi;
+package io.github.chihirios.kogasaravi.blocks;
 
-import io.github.chihirios.kogasaravi.blocks.ChallengePortalBlock;
-import io.github.chihirios.kogasaravi.blocks.ForgeBlock;
+import io.github.chihirios.kogasaravi.Kogasaravi;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.material.Material;
@@ -17,7 +16,7 @@ public class KogasaraviBlocks {
     public static final RegistryObject<Block> BASIC_FORGE = BLOCKS.register("basic_forge", ForgeBlock::new);
     public static final RegistryObject<Block> CHALLENGE_PORTAL = BLOCKS.register("challenge_portal", ChallengePortalBlock::new);
 
-    protected static void register(IEventBus eventBus) {
+    public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);
     }
 }

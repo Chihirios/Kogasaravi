@@ -1,6 +1,5 @@
 package io.github.chihirios.kogasaravi.blocks.entities;
 
-import io.github.chihirios.kogasaravi.KogasaraviBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;

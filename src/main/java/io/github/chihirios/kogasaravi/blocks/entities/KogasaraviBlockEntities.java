@@ -1,6 +1,7 @@
-package io.github.chihirios.kogasaravi;
+package io.github.chihirios.kogasaravi.blocks.entities;
 
-import io.github.chihirios.kogasaravi.blocks.entities.ForgeBlockEntity;
+import io.github.chihirios.kogasaravi.Kogasaravi;
+import io.github.chihirios.kogasaravi.blocks.KogasaraviBlocks;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.registries.DeferredRegister;
@@ -13,7 +14,7 @@ public class KogasaraviBlockEntities {
     public static final RegistryObject<BlockEntityType<ForgeBlockEntity>> FORGE =
             BLOCK_ENTITIES.register("forge", () -> BlockEntityType.Builder.of(ForgeBlockEntity::new, KogasaraviBlocks.BASIC_FORGE.get()).build(null));
 
-    protected static void register(IEventBus eventBus) {
+    public static void register(IEventBus eventBus) {
         BLOCK_ENTITIES.register(eventBus);
     }
 }
