@@ -1,5 +1,6 @@
 {
   "kogasaravi.itemGroup.main": "Kogasaravi",
   "block.kogasaravi.forge_brick": "Forge Brick",
-  "block.kogasaravi.basic_forge": "Basic Forge"
+  "block.kogasaravi.basic_forge": "Basic Forge",
+  "block.kogasaravi.challenge_portal": "Challenge Portal"
 }

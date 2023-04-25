@@ -24,7 +24,7 @@ public class Kogasaravi
     public static ResourceLocation id(String path) {
         return new ResourceLocation(MODID, path);
     }
-    private static final Logger LOGGER = LogUtils.getLogger();
+    public static final Logger LOGGER = LogUtils.getLogger();
 
     public Kogasaravi()
     {
