@@ -21,11 +21,15 @@ public class DataGenerators {
 
                 Set.of(),
 
+                // List of Providers go here
                 List.of(
+
                         new LootTableProvider.SubProviderEntry(
                         MyBlockLootSubProvider::new,
-                        LootContextParamSets.BLOCK
-                )),
+                        LootContextParamSets.BLOCK)
+
+
+                ),
 
         lookupProvider
     ));

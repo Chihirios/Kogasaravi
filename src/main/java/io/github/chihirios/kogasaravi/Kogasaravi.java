@@ -3,7 +3,7 @@ package io.github.chihirios.kogasaravi;
 import com.mojang.logging.LogUtils;
 import io.github.chihirios.kogasaravi.blocks.KogasaraviBlocks;
 import io.github.chihirios.kogasaravi.data.DataGenerators;
-import io.github.chihirios.kogasaravi.items.KogasaraviItem;
+import io.github.chihirios.kogasaravi.items.KogasaraviItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
@@ -43,9 +43,9 @@ public class Kogasaravi {
 
 
     // Creates a creative tab with the id "kogasaravi:example_tab" for the example item, that is placed after the combat tab
-    public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.kogasaravi")).withTabsBefore(CreativeModeTabs.COMBAT).icon(() -> KogasaraviItem.EXAMPLE_ITEM.get().getDefaultInstance()).displayItems((parameters, output) -> {
-        output.accept(KogasaraviItem.EXAMPLE_ITEM.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
-    }).build());
+   // public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.kogasaravi")).withTabsBefore(CreativeModeTabs.COMBAT).icon(() -> KogasaraviItems.EXAMPLE_ITEM.get().getDefaultInstance()).displayItems((parameters, output) -> {
+    //    output.accept(KogasaraviItems.EXAMPLE_ITEM.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
+   // }).build());
 
 
 
@@ -61,7 +61,7 @@ public class Kogasaravi {
         // Register the Deferred Register to the mod event bus so blocks get registered
         KogasaraviBlocks.BLOCKS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so items get registered
-        KogasaraviItem.ITEMS.register(modEventBus);
+        KogasaraviItems.ITEMS.register(modEventBus);
         // Register the Deferred Register to the mod event bus so tabs get registered
         CREATIVE_MODE_TABS.register(modEventBus);
 
@@ -91,7 +91,7 @@ public class Kogasaravi {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) event.accept(KogasaraviBlocks.KOGASABLOCK);
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) event.accept(KogasaraviItems.CUSTOMTHINGY);
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
