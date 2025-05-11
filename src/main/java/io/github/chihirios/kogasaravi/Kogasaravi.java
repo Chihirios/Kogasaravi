@@ -2,6 +2,7 @@ package io.github.chihirios.kogasaravi;
 
 import com.mojang.logging.LogUtils;
 import io.github.chihirios.kogasaravi.blocks.KogasaraviBlocks;
+import io.github.chihirios.kogasaravi.data.DataGenerators;
 import io.github.chihirios.kogasaravi.items.KogasaraviItem;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -54,6 +55,8 @@ public class Kogasaravi {
     public Kogasaravi(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
+
+        modEventBus.addListener(DataGenerators::onGatherData);
 
         // Register the Deferred Register to the mod event bus so blocks get registered
         KogasaraviBlocks.BLOCKS.register(modEventBus);
