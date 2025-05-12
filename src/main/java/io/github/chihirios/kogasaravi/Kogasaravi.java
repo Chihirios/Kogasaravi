@@ -91,7 +91,12 @@ public class Kogasaravi {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) event.accept(KogasaraviItems.CUSTOMTHINGY);
+        if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
+        {
+            event.accept(KogasaraviItems.CUSTOMTHINGY);
+            event.accept(KogasaraviBlocks.KOGASABLOCK);
+        }
+
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call

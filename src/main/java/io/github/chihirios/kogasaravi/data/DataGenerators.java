@@ -1,7 +1,7 @@
 package io.github.chihirios.kogasaravi.data;
 
 
-import io.github.chihirios.kogasaravi.data.loottable.MyBlockLootSubProvider;
+import io.github.chihirios.kogasaravi.data.loottable.BlockLootProvider;
 import net.minecraft.data.loot.LootTableProvider;
 import net.minecraft.world.level.storage.loot.parameters.LootContextParamSets;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -25,7 +25,7 @@ public class DataGenerators {
                 List.of(
 
                         new LootTableProvider.SubProviderEntry(
-                        MyBlockLootSubProvider::new,
+                        BlockLootProvider::new,
                         LootContextParamSets.BLOCK)
 
 
