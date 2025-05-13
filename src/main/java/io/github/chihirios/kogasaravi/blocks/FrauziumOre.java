@@ -6,9 +6,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
-public class CustomOre extends Block {
+public class FrauziumOre extends Block {
 
-    public CustomOre(ResourceLocation registryName) {
+    public FrauziumOre(ResourceLocation registryName) {
 
         super(BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))

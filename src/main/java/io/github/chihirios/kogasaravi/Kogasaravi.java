@@ -7,7 +7,6 @@ import io.github.chihirios.kogasaravi.items.KogasaraviItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
-import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
@@ -23,7 +22,6 @@ import net.neoforged.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
-import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.slf4j.Logger;
 
@@ -93,8 +91,11 @@ public class Kogasaravi {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
         {
-            event.accept(KogasaraviItems.CUSTOMTHINGY);
-            event.accept(KogasaraviBlocks.KOGASABLOCK);
+            event.accept(KogasaraviItems.CHIHIRIUMORE);
+            event.accept(KogasaraviBlocks.CHIHIRIUMOREBLOCK);
+            event.accept(KogasaraviItems.FRAUZIUMORE);
+            event.accept(KogasaraviBlocks.FRAUZIUMOREBLOCK);
+
         }
 
     }

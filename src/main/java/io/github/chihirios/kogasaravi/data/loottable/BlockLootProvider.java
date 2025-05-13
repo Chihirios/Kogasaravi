@@ -12,7 +12,6 @@ import net.minecraft.world.item.enchantment.Enchantments;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
-import net.minecraft.world.level.storage.loot.entries.LootPoolEntryContainer;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
@@ -36,7 +35,6 @@ public class BlockLootProvider extends BlockLootSubProvider {
         HolderLookup.RegistryLookup<Enchantment> registryLookup = this.registries.lookupOrThrow(Registries.ENCHANTMENT);
 
 
-
         return this.createSilkTouchDispatchTable(varBlock,
                 this.applyExplosionDecay(varBlock, LootItem.lootTableItem(varitem)
                         .apply(SetItemCountFunction.setCount(UniformGenerator.between(minDrop, maxDrops)))
@@ -45,11 +43,11 @@ public class BlockLootProvider extends BlockLootSubProvider {
     }
 
 
-
-
     @Override
     protected void generate() {
-        add(KogasaraviBlocks.KOGASABLOCK.get(), block -> oreDropTable(KogasaraviBlocks.KOGASABLOCK.get(), KogasaraviItems.CUSTOMTHINGY.get(), 1, 6));
+        add(KogasaraviBlocks.CHIHIRIUMOREBLOCK.get(), block -> oreDropTable(KogasaraviBlocks.CHIHIRIUMOREBLOCK.get(), KogasaraviItems.CHIHIRIUMORE.get(), 1, 6));
+        add(KogasaraviBlocks.FRAUZIUMOREBLOCK.get(), block -> oreDropTable(KogasaraviBlocks.FRAUZIUMOREBLOCK.get(), KogasaraviItems.FRAUZIUMORE.get(), 1, 6));
+
     }
 
 
