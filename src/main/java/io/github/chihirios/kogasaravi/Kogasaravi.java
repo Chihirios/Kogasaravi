@@ -95,6 +95,8 @@ public class Kogasaravi {
             event.accept(KogasaraviBlocks.CHIHIRIUMOREBLOCK);
             event.accept(KogasaraviItems.FRAUZIUMORE);
             event.accept(KogasaraviBlocks.FRAUZIUMOREBLOCK);
+            event.accept(KogasaraviItems.FERCHROORE);
+            event.accept(KogasaraviBlocks.FERCHROOREBLOCK);
 
         }
 

@@ -13,5 +13,7 @@ public class KogasaraviBlocks {
 
     public static final DeferredBlock<Block> FRAUZIUMOREBLOCK = BLOCKS.register("frauziumore", FrauziumOre::new);
 
+    public static final DeferredBlock<Block> FERCHROOREBLOCK = BLOCKS.register("ferchroore", FrauziumOre::new);
+
 
 }

@@ -19,4 +19,8 @@ public class KogasaraviItems {
 
     public static final DeferredItem<Item> FRAUZIUMORE = ITEMS.registerItem("rawfrauzium", Item::new, new Item.Properties());
 
+    public static final DeferredItem<BlockItem> FERCHROOREBLOCK_ITEM = ITEMS.registerSimpleBlockItem("ferchroore", KogasaraviBlocks.FERCHROOREBLOCK);
+
+    public static final DeferredItem<Item> FERCHROORE = ITEMS.registerItem("rawferchro", Item::new, new Item.Properties());
+
 }
