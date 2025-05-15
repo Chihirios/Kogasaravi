@@ -11,16 +11,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class KogasaraviItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Kogasaravi.MODID);
 
-    public static final DeferredItem<BlockItem> CHIHIRIUMOREBLOCK_ITEM = ITEMS.registerSimpleBlockItem("chihiriumore", KogasaraviBlocks.CHIHIRIUMOREBLOCK);
+    public static final DeferredItem<BlockItem> CHIHIRIUMOREBLOCK_ITEM = ITEMS.registerSimpleBlockItem("chihirium_ore", KogasaraviBlocks.CHIHIRIUMOREBLOCK);
 
-    public static final DeferredItem<Item> CHIHIRIUMORE = ITEMS.registerItem("rawchihirium", Item::new, new Item.Properties());
-
-    public static final DeferredItem<BlockItem> FRAUZIUMOREBLOCK_ITEM = ITEMS.registerSimpleBlockItem("frauziumore", KogasaraviBlocks.FRAUZIUMOREBLOCK);
-
-    public static final DeferredItem<Item> FRAUZIUMORE = ITEMS.registerItem("rawfrauzium", Item::new, new Item.Properties());
-
-    public static final DeferredItem<BlockItem> FERCHROOREBLOCK_ITEM = ITEMS.registerSimpleBlockItem("ferchroore", KogasaraviBlocks.FERCHROOREBLOCK);
-
-    public static final DeferredItem<Item> FERCHROORE = ITEMS.registerItem("rawferchro", Item::new, new Item.Properties());
-
+    public static final DeferredItem<Item> RAWCHIHIRIUMORE = ITEMS.registerItem("raw_chihirium", Item::new, new Item.Properties());
 }

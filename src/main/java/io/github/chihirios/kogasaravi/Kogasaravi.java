@@ -91,13 +91,8 @@ public class Kogasaravi {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
         {
-            event.accept(KogasaraviItems.CHIHIRIUMORE);
+            event.accept(KogasaraviItems.RAWCHIHIRIUMORE);
             event.accept(KogasaraviBlocks.CHIHIRIUMOREBLOCK);
-            event.accept(KogasaraviItems.FRAUZIUMORE);
-            event.accept(KogasaraviBlocks.FRAUZIUMOREBLOCK);
-            event.accept(KogasaraviItems.FERCHROORE);
-            event.accept(KogasaraviBlocks.FERCHROOREBLOCK);
-
         }
 
     }
