@@ -91,8 +91,8 @@ public class Kogasaravi {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
         {
-            event.accept(KogasaraviItems.RAWCHIHIRIUMORE);
-            event.accept(KogasaraviBlocks.CHIHIRIUMOREBLOCK);
+            event.accept(KogasaraviItems.CHIHIRIUM_RAW);
+            event.accept(KogasaraviBlocks.CHIHIRIUM_ORE_BLOCK);
         }
 
     }

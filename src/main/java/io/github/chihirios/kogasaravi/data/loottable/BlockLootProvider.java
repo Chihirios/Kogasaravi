@@ -45,7 +45,7 @@ public class BlockLootProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        add(KogasaraviBlocks.CHIHIRIUMOREBLOCK.get(), block -> oreDropTable(KogasaraviBlocks.CHIHIRIUMOREBLOCK.get(), KogasaraviItems.RAWCHIHIRIUMORE.get(), 1, 6));
+        add(KogasaraviBlocks.CHIHIRIUM_ORE_BLOCK.get(), block -> oreDropTable(KogasaraviBlocks.CHIHIRIUM_ORE_BLOCK.get(), KogasaraviItems.CHIHIRIUM_RAW.get(), 1, 6));
     }
 
 
