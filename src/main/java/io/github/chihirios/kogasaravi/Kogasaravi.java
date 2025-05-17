@@ -7,6 +7,7 @@ import io.github.chihirios.kogasaravi.items.KogasaraviItems;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.registries.Registries;
+import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraft.world.level.block.Blocks;
@@ -30,6 +31,10 @@ import org.slf4j.Logger;
 public class Kogasaravi {
     // Define mod id in a common place for everything to reference
     public static final String MODID = "kogasaravi";
+    public static ResourceLocation id(String path) {
+        return ResourceLocation.fromNamespaceAndPath(MODID, path);
+    }
+
     // Directly reference a slf4j logger
     private static final Logger LOGGER = LogUtils.getLogger();
     // Create a Deferred Register to hold Blocks which will all be registered under the "kogasaravi" namespace

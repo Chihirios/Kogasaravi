@@ -1,6 +1,6 @@
 {
-  "parent": "minecraft:item/generated",
+  "parent": "item/generated",
   "textures": {
-    "layer0": "kogasaravi:textures/item/placeholder"
+    "layer0": "kogasaravi:item/placeholder"
   }
 }
