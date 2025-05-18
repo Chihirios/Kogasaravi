@@ -9,6 +9,6 @@ public class KogasaraviBlocks {
 
     public static final DeferredRegister.Blocks BLOCKS = DeferredRegister.createBlocks(Kogasaravi.MODID);
 
-    public static final DeferredBlock<Block> CHIHIRIUM_ORE_BLOCK = BLOCKS.register("chihirium_ore", ChihiriumOre::new);
+    public static final DeferredBlock<Block> MAGNESIA_ORE_BLOCK = BLOCKS.register("magnesia_ore", MagnesiaOre::new);
 
 }

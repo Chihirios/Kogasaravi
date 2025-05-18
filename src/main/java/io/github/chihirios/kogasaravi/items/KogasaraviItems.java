@@ -11,7 +11,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class KogasaraviItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(Kogasaravi.MODID);
 
-    public static final DeferredItem<BlockItem> CHIHIRIUM_ORE_BLOCK = ITEMS.registerSimpleBlockItem("chihirium_ore", KogasaraviBlocks.CHIHIRIUM_ORE_BLOCK);
+    public static final DeferredItem<BlockItem> MAGNESIA_ORE_BLOCK = ITEMS.registerSimpleBlockItem("magnesia_ore", KogasaraviBlocks.MAGNESIA_ORE_BLOCK);
 
-    public static final DeferredItem<Item> CHIHIRIUM_RAW = ITEMS.registerItem("chihirium_raw", Item::new, new Item.Properties());
+    public static final DeferredItem<Item> MAGNESIA_POWDER = ITEMS.registerItem("magnesia_powder", Item::new, new Item.Properties());
 }

@@ -6,9 +6,9 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 
-public class ChihiriumOre extends Block {
+public class MagnesiaOre extends Block {
 
-    public ChihiriumOre(ResourceLocation registryName) {
+    public MagnesiaOre(ResourceLocation registryName) {
 
         super(BlockBehaviour.Properties.of()
                 .setId(ResourceKey.create(Registries.BLOCK, registryName))

@@ -50,9 +50,6 @@ public class Kogasaravi {
     //    output.accept(KogasaraviItems.EXAMPLE_ITEM.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
    // }).build());
 
-
-
-
     // The constructor for the mod class is the first code that is run when your mod is loaded.
     // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public Kogasaravi(IEventBus modEventBus, ModContainer modContainer) {
@@ -96,8 +93,8 @@ public class Kogasaravi {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
         {
-            event.accept(KogasaraviItems.CHIHIRIUM_RAW);
-            event.accept(KogasaraviBlocks.CHIHIRIUM_ORE_BLOCK);
+            event.accept(KogasaraviItems.MAGNESIA_POWDER);
+            event.accept(KogasaraviBlocks.MAGNESIA_ORE_BLOCK);
         }
 
     }
