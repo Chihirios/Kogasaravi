@@ -1,6 +1,6 @@
 {
 	"parent": "minecraft:block/cube_all",
 	"textures": {
-		"all": "kogasaravi:block/placeholder"
+		"all": "kogasaravi:block/magnesiaore"
 	}
 }

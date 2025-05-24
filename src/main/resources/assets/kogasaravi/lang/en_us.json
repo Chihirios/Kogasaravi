@@ -1,5 +1,8 @@
 {
   "itemGroup.kogasaravi": "Example Mod Tab",
   "block.kogasaravi.example_block": "Example Block",
-  "item.kogasaravi.example_item": "Example Item"
+  "item.kogasaravi.example_item": "Example Item",
+
+  "block.kogasaravi.magnesia_ore": "Magnesia Ore",
+  "item.kogasaravi.magnesia_powder": "Magnesia Powder"
 }
