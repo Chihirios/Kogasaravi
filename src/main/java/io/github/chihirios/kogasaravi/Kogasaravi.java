@@ -26,60 +26,43 @@ import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.slf4j.Logger;
 
-// The value here should match an entry in the META-INF/neoforge.mods.toml file
+
 @Mod(Kogasaravi.MODID)
 public class Kogasaravi {
-    // Define mod id in a common place for everything to reference
+
     public static final String MODID = "kogasaravi";
     public static ResourceLocation id(String path) {
         return ResourceLocation.fromNamespaceAndPath(MODID, path);
     }
 
-    // Directly reference a slf4j logger
+
     private static final Logger LOGGER = LogUtils.getLogger();
-    // Create a Deferred Register to hold Blocks which will all be registered under the "kogasaravi" namespace
 
-    // Create a Deferred Register to hold Items which will all be registered under the "kogasaravi" namespace
-
-    // Create a Deferred Register to hold CreativeModeTabs which will all be registered under the "kogasaravi" namespace
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TABS = DeferredRegister.create(Registries.CREATIVE_MODE_TAB, MODID);
 
-
-    // Creates a creative tab with the id "kogasaravi:example_tab" for the example item, that is placed after the combat tab
-   // public static final DeferredHolder<CreativeModeTab, CreativeModeTab> EXAMPLE_TAB = CREATIVE_MODE_TABS.register("example_tab", () -> CreativeModeTab.builder().title(Component.translatable("itemGroup.kogasaravi")).withTabsBefore(CreativeModeTabs.COMBAT).icon(() -> KogasaraviItems.EXAMPLE_ITEM.get().getDefaultInstance()).displayItems((parameters, output) -> {
-    //    output.accept(KogasaraviItems.EXAMPLE_ITEM.get()); // Add the example item to the tab. For your own tabs, this method is preferred over the event
-   // }).build());
-
-    // The constructor for the mod class is the first code that is run when your mod is loaded.
-    // FML will recognize some parameter types like IEventBus or ModContainer and pass them in automatically.
     public Kogasaravi(IEventBus modEventBus, ModContainer modContainer) {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
         modEventBus.addListener(DataGenerators::onGatherData);
 
-        // Register the Deferred Register to the mod event bus so blocks get registered
+
         KogasaraviBlocks.BLOCKS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so items get registered
+
         KogasaraviItems.ITEMS.register(modEventBus);
-        // Register the Deferred Register to the mod event bus so tabs get registered
+
         CREATIVE_MODE_TABS.register(modEventBus);
 
-        // Register ourselves for server and other game events we are interested in.
-        // Note that this is necessary if and only if we want *this* class (Kogasaravi) to respond directly to events.
-        // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
 
-        // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
 
-        // Register our mod's ModConfigSpec so that FML can create and load the config file for us
         modContainer.registerConfig(ModConfig.Type.COMMON, Config.SPEC);
 
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
-        // Some common setup code
+
         LOGGER.info("HELLO FROM COMMON SETUP");
 
         if (Config.logDirtBlock) LOGGER.info("DIRT BLOCK >> {}", BuiltInRegistries.BLOCK.getKey(Blocks.DIRT));
@@ -89,24 +72,25 @@ public class Kogasaravi {
         Config.items.forEach((item) -> LOGGER.info("ITEM >> {}", item.toString()));
     }
 
-    // Add the example block item to the building blocks tab
+    // Mod items and blocks are added under here.
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if (event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS)
         {
             event.accept(KogasaraviItems.MAGNESIA_POWDER);
             event.accept(KogasaraviBlocks.MAGNESIA_ORE_BLOCK);
+            event.accept(KogasaraviItems.FIRE_CLAY_BALL);
+            event.accept(KogasaraviBlocks.FIRE_CLAY);
+
         }
 
     }
 
-    // You can use SubscribeEvent and let the Event Bus discover methods to call
     @SubscribeEvent
     public void onServerStarting(ServerStartingEvent event) {
         // Do something when the server starts
         LOGGER.info("HELLO from server starting");
     }
 
-    // You can use EventBusSubscriber to automatically register all static methods in the class annotated with @SubscribeEvent
     @EventBusSubscriber(modid = MODID, bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
     public static class ClientModEvents {
         @SubscribeEvent

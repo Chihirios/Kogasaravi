@@ -11,4 +11,6 @@ public class KogasaraviBlocks {
 
     public static final DeferredBlock<Block> MAGNESIA_ORE_BLOCK = BLOCKS.register("magnesia_ore", MagnesiaOre::new);
 
+    public static final DeferredBlock<Block> FIRE_CLAY = BLOCKS.register("fire_clay", FireClay::new);
+
 }

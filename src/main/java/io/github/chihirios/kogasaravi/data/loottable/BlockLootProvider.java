@@ -45,7 +45,9 @@ public class BlockLootProvider extends BlockLootSubProvider {
 
     @Override
     protected void generate() {
-        add(KogasaraviBlocks.MAGNESIA_ORE_BLOCK.get(), block -> oreDropTable(KogasaraviBlocks.MAGNESIA_ORE_BLOCK.get(), KogasaraviItems.MAGNESIA_POWDER.get(), 1, 6));
+        add(KogasaraviBlocks.MAGNESIA_ORE_BLOCK.get(), block -> oreDropTable(KogasaraviBlocks.MAGNESIA_ORE_BLOCK.get(), KogasaraviItems.MAGNESIA_POWDER.get(), 1, 1));
+        add(KogasaraviBlocks.FIRE_CLAY.get(), block -> oreDropTable(KogasaraviBlocks.FIRE_CLAY.get(), KogasaraviItems.FIRE_CLAY_BALL.get(), 2, 4));
+
     }
 
 

@@ -4,5 +4,8 @@
   "item.kogasaravi.example_item": "Example Item",
 
   "block.kogasaravi.magnesia_ore": "Magnesia Ore",
-  "item.kogasaravi.magnesia_powder": "Magnesia Powder"
+  "item.kogasaravi.magnesia_powder": "Magnesia Powder",
+
+  "block.kogasaravi.fire_clay": "Fire Clay",
+  "item.kogasaravi.fire_clay_ball": "Fire Clay Ball"
 }
